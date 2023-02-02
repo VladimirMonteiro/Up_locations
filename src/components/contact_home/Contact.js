@@ -2,7 +2,7 @@ import './Contact.css'
 import {useState, useEffect} from 'react'
 
 
-
+const apiurl = process.env.REACT_APP_API_URL
 
 const Contact = () => {
 
@@ -19,7 +19,7 @@ const Contact = () => {
             message
         }
 
-        const res = await fetch('http://localhost:5000/form', {
+        const res = await fetch(apiurl, {
             method: 'POST',
             headers: {
                 "Content-Type": "application/json"

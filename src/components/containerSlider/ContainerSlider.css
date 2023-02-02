@@ -65,6 +65,9 @@
 
 
 @media screen and (max-width: 580px) {
+ .swiper .navigation .prevEl {
+      display: none;
+    }
 
     .containerSlider{
         width: 100%;
