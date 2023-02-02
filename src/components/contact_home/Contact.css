@@ -67,7 +67,9 @@ textarea{
     resize: none;
     padding: 10px;
     font-size: 15px;
+    border: 1px solid black;
     outline: none;
+
 }
 
 textarea:focus{
