@@ -19,7 +19,7 @@ const Contact = () => {
             message
         }
         
-        const res = await fetch('https://urchin-app-nxh6l.ondigitalocean.app/form', {
+        const res = await fetch('https://coral-app-kdbds.ondigitalocean.app/form', {
             method: 'POST',
             headers: {
                 "Content-Type": "application/json"
