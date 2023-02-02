@@ -17,7 +17,7 @@ const Products = ()  => {
     useEffect(()=>{
         async function fecthData() {
            
-           const res = await fetch("https://coral-app-kdbds.ondigitalocean.app/products")
+           const res = await fetch("https://squid-app-whqlo.ondigitalocean.app/products")
 
            const data = await res.json()
 
