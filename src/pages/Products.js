@@ -16,7 +16,7 @@ const Products = ()  => {
     
     useEffect(()=>{
         async function fecthData() {
-           const urlApi = process.env.
+           
            const res = await fetch("https://urchin-app-nxh6l.ondigitalocean.app/products")
 
            const data = await res.json()

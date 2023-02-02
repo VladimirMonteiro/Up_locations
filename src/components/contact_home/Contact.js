@@ -18,8 +18,8 @@ const Contact = () => {
             tel,
             message
         }
-        const apiurl = process.env.REACT_APP_API_URL
-        const res = await fetch(apiurl, {
+        
+        const res = await fetch('https://urchin-app-nxh6l.ondigitalocean.app/form', {
             method: 'POST',
             headers: {
                 "Content-Type": "application/json"
