@@ -1,0 +1,33 @@
+footer{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    background-color: #083b88;
+    color: white;
+}
+
+
+
+footer p {
+    padding: 15px;
+    color: white;
+}
+
+footer ul {
+    padding: 15px;
+    display: flex;
+
+}
+
+footer a {
+    text-decoration: none;
+    color: yellow;
+
+}
+
+footer ul li {
+    list-style: none;
+    margin-right: 20px ;
+    font-size: 25px;
+ 
+}

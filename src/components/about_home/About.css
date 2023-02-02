@@ -1,0 +1,37 @@
+
+
+.about-container {
+
+    width: 100%;
+    display: flex;
+    margin-bottom: 35px;
+
+    
+}
+
+.about-container .center {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.container03  h2 {
+    margin: 20px auto;
+    
+}
+
+.about-container .imagem-up {
+    margin-top: 20px;
+    width: 30%;
+
+
+}
+
+.about-container .imagem-up img {
+    width: 100%;
+   
+}
+
+.about-container .about-message {
+    margin: 20px;
+    width: 70%;
+}

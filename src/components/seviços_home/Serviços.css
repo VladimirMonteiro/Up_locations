@@ -1,0 +1,82 @@
+
+
+.serviços {
+    padding: 30px 0;
+    width: 100%;
+    height: auto;
+    background: linear-gradient(to bottom, #012C6D ,#0251B8 ,#0267EB);
+    margin-top: 70px;
+    color: yellow;
+    
+}
+
+.center-service{
+    max-width: 1280px;
+    margin:0 auto;
+    padding:0 2%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+
+    
+}
+
+.conteudo {
+    width: 100%;
+    text-align: center;
+}
+
+.conteudo h2 {
+    font-weight: bold;
+    font-size: 30px;
+}
+
+.service-single {
+
+  
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 20%;
+    height: auto;
+    margin-top: 20px;
+    border-radius: 10px ;
+ 
+}
+.service-single h2{
+    text-align: center;
+    margin: 15px;
+  
+    
+}
+
+.service-single .icon {
+    width: 90px;
+   
+
+}
+
+.service-single p {
+    width: 100%;
+    text-align: left;
+    padding: 0 10px;
+    margin-top: 5px;
+   
+}
+
+@media screen  and (max-width: 580px){
+    .center-service {
+        display: block;
+    
+    }
+    .service-single{
+       width: 100%;
+        margin: 0 auto;
+        margin-bottom: 30px;
+    }
+
+    .conteudo h2{
+        margin-bottom: 30px;
+    }
+}

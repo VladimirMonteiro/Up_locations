@@ -1,0 +1,95 @@
+header{
+    width: 100%;
+    height: 100px;
+    background: linear-gradient(to right, #012C6D ,#0251B8 ,#0267EB);
+    border-bottom: 2px solid yellow;    
+}
+
+header h1 {
+    color: yellow;
+    font-weight: bold;
+    padding: 29px 0px;
+
+}
+ 
+.center {
+    max-width: 1280px;
+    margin:0 auto;
+    padding:0 2%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+}
+
+header ul {
+    display: flex;
+    justify-content: flex-end;
+    padding: 40px 15px;
+}
+header ul li {
+    list-style: none;
+    margin-left: 30px;
+    font-weight: bold;
+
+}
+
+.center ul li a {
+    color: yellow
+}
+
+.menu-mobile {
+    display: none;
+    background-image: url('../../assets/menu.png');
+    background-repeat: no-repeat;
+    margin: 29px 0;
+    width: 37px ;
+    height: 37px;
+    cursor: pointer;
+  
+    
+
+}
+.menu-mobile ul{
+   
+    height: 190px;
+    background-color: rgba(21, 81, 192, 0.788);
+    position: absolute;
+    width: 100%;
+    left: 0;
+    top:100px;
+    color: white;
+    list-style-type: none;
+    text-align: center;
+    z-index: 2;
+}
+
+.menu-mobile ul li{
+    margin: 10px 0;
+    padding-bottom: 4px;
+    border-bottom: 1px solid yellow;
+   
+}
+
+
+
+
+
+@media screen and (max-width: 768px) {
+    
+    .menu-desktop {
+        display: none;
+    }
+
+    .menu-mobile{
+        display: block;
+    }
+
+    .menu-mobile ul {
+        display: block;
+    }
+
+}
+
+
+

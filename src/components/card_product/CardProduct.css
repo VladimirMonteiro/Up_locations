@@ -1,0 +1,38 @@
+.product-single{
+    min-width: 300px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 20px  10px;
+
+
+}
+
+.product-single img {
+    width: 70%;
+    padding: 20px;
+    margin: 0 auto;
+}
+
+.product-single h3{
+    margin-left: 5px;
+    width: 100%;
+    word-wrap: break-word;
+}
+
+.product-single p{
+    padding: 10px;
+    width: 100%;
+   word-wrap: break-word;
+
+}
+
+.product-single button {
+    padding: 5px 0;
+    cursor: pointer;
+    margin: 10px;
+}
+
+
