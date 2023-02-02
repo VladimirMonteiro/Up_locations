@@ -4,7 +4,7 @@ import './Products.css'
 
 import {useState, useEffect} from 'react'
 
-
+const urlApi = process.env.REACT_APP_URL_PRODUCTS
 
 const Products = ()  => {
    
@@ -16,7 +16,7 @@ const Products = ()  => {
     useEffect(()=>{
         async function fecthData() {
 
-           const res = await fetch("http://localhost:5000/products")
+           const res = await fetch(urlApi)
 
            const data = await res.json()
 
