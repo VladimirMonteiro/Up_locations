@@ -2,7 +2,7 @@ import './Contact.css'
 import {useState} from 'react'
 
 
-const apiurl = process.env.REACT_APP_API_URL
+
 
 const Contact = () => {
 
@@ -18,7 +18,7 @@ const Contact = () => {
             tel,
             message
         }
-
+        const apiurl = process.env.REACT_APP_API_URL
         const res = await fetch(apiurl, {
             method: 'POST',
             headers: {
