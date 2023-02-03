@@ -22,8 +22,8 @@ const Products = ()  => {
            const data = await res.json()
 
 
-           setProducts(data.products)
-           setUrl(data.url)
+           return  setProducts(data.products), setUrl(data.url)
+        
            console.log(data)
 
         }
