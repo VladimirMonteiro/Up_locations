@@ -9,7 +9,7 @@ import {useState, useEffect} from 'react'
 const Products = ()  => {
    
    
-
+    const urlApi = process.env.REACT_APP_URL_PRODUCTS
     const [Products, setProducts] = useState([])
     const [url, setUrl] = useState("")
     
@@ -17,7 +17,7 @@ const Products = ()  => {
     useEffect(()=>{
         async function fecthData() {
            
-           const res = await fetch("https://squid-app-whqlo.ondigitalocean.app/products")
+           const res = await fetch(urlApi)
 
            const data = await res.json()
 

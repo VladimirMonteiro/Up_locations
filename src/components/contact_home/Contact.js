@@ -3,6 +3,7 @@ import {useState} from 'react'
 
 
 
+const urlEmail = process.env.REACT_APP_EMAIL
 
 const Contact = () => {
 
@@ -19,7 +20,7 @@ const Contact = () => {
             message
         }
         
-        const res = await fetch('https://squid-app-whqlo.ondigitalocean.app/form', {
+        const res = await fetch(urlEmail, {
             method: 'POST',
             headers: {
                 "Content-Type": "application/json"
