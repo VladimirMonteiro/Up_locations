@@ -16,15 +16,14 @@ const Products = ()  => {
     
     useEffect(()=>{
         async function fecthData() {
-           
+        try{ 
            const res = await fetch(urlApi)
-
            const data = await res.json()
-
-
-           return  setProducts(data.products), setUrl(data.url)
-        
            console.log(data)
+           return  setProducts(data.products), setUrl(data.url)
+         }catch(err){
+            console.log(err)
+         }
 
         }
 
