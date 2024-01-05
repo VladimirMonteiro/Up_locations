@@ -50,11 +50,11 @@ const Contact = () => {
                         <h3>Entre em contato conosco</h3>
                         <div>
                             <label htmlFor ='name'>Nome:</label> <br></br>
-                            <input type = 'text' name = 'name' id = 'name' required placeholder = 'Name...' onChange={(e)=>setName(e.target.value) } value ={name} />
+                            <input type = 'text' name = 'name' id = 'name' required placeholder = 'Nome...' onChange={(e)=>setName(e.target.value) } value ={name} />
                         </div>
                         <div>
                             <label htmlFor ='tel'>Telefone:</label> <br></br>
-                            <input type = 'text' name = 'tel' id = 'tel' required placeholder = 'Phone...' onChange={(e)=> setTel(e.target.value)} value = {tel} />
+                            <input type = 'text' name = 'tel' id = 'tel' required placeholder = 'Telefone...' onChange={(e)=> setTel(e.target.value)} value = {tel} />
                         </div>
                         <textarea placeholder = 'Mensagem...' onChange={(e)=> setMessage(e.target.value)} value = {message}></textarea>
                         <input type = 'submit' value = 'Enviar' />

@@ -1,33 +1,89 @@
 footer{
     width: 100%;
-    display: flex;
-    justify-content: space-between;
-    background-color: #083b88;
+    background: linear-gradient(to bottom, #012C6D ,#0251B8 ,#0267EB);
+    border-top: 2px solid yellow;
+    margin-top: 50px;
     color: white;
+   
 }
 
-
-
-footer p {
-    padding: 15px;
-    color: white;
+.footer_center{
+    max-width: 1250px;
+    margin: 0 auto;
+    display: flex ;
+    padding: 20px;
+    justify-content: space-around;
+    
 }
+
+.logo {
+    width: 300px;
+    
+}
+
+.logo img {
+    width: 100%;
+}
+
 
 footer ul {
     padding: 15px;
     display: flex;
+    flex-direction: column;
 
 }
 
 footer a {
     text-decoration: none;
-    color: yellow;
+    color: white;
 
+}
+footer a:hover{
+    color: yellow;
 }
 
 footer ul li {
     list-style: none;
-    margin-right: 20px ;
-    font-size: 25px;
- 
+    margin-bottom: 5px;
+    
+}
+
+
+.redes_sociais ul {
+    display: flex;
+    flex-direction: row;
+}
+.redes_sociais ul li{
+    margin-right: 20px;
+    font-size: 30px;
+}
+
+.sub_footer{
+    background-color: #FFFFFF;
+    color: #948f8f;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 50px;
+}
+
+.sub_footer span{
+    color: #012C6D;
+    font-weight: bold;
+}
+
+@media screen and (max-width:850px) {
+
+    .footer_center{
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+        margin: 0 auto;
+        text-align: left;
+    }
+
+    .institucional{
+        margin-right: 100px;
+    }
+    
 }

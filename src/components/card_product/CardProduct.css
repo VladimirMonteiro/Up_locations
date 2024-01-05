@@ -18,9 +18,9 @@
 }
 
 .product-single h3{
-    margin-left: 5px;
     width: 100%;
     word-wrap: break-word;
+    text-align: center;
 }
 
 .product-single p{
@@ -30,10 +30,21 @@
 
 }
 
-.product-single button {
+.product-single a {
     padding: 5px 0;
     cursor: pointer;
-    margin: 10px;
+    margin: 8px;
+    background-color: rgb(21, 200, 21);
+    color: white;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 17px;
+    border: none;
+    text-align: center;
+}
+
+.product-single a:hover{
+    background-color:rgb(6, 168, 6) ;
 }
 
 

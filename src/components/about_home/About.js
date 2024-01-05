@@ -1,5 +1,13 @@
 import './About.css'
-import uphouse from '../../assets/uphouse.jpeg'
+
+//images
+import betoneiras from '../../assets/betoneira_home.jpg'
+import andaimes from '../../assets/andaimes.jpg'
+import rompedores from '../../assets/rompedores.jpg'
+import compactadores from '../../assets/compactadores.jpg'
+
+
+import {Link} from 'react-router-dom'
 
 
 
@@ -11,18 +19,37 @@ const About = () => {
 
     return (
         <section className = 'container03'>
+            <h2>Equipamentos mais alugados</h2>
             <div className="center">
-                <h2>Sobre nós</h2>
-                <div className="about-container">
-                    <div className="imagem-up">
-                        <img src = {uphouse} alt = 'up-house'></img>
+                <Link to='/produtos'>
+                    <div className='single_image'>
+                        <img src={betoneiras} alt="betoneiras" />
+                        <p>Betoneiras</p>
                     </div>
-                    <div className="about-message">
-                        <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse feugiat eu purus eu pulvinar. Mauris blandit ligula libero, id interdum ligula tinciduntLorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse feugiat eu purus eu pulvinar. Mauris blandit ligula libero, id interdum ligula tinciduntLorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse feugiat eu purus eu pulvinar. Mauris blandit ligula libero, id interdum ligula tinciduntLorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse feugiat eu purus eu pulvinar. Mauris blandit ligula libero, id interdum ligula tincidunt</p>
-
+                </Link>
+                <a href="/produtos">
+                    <div className='single_image'>
+                        <img src={andaimes} alt="andaimes" />
+                        <p>Andaimes</p>
                     </div>
+                </a>
+                <Link to="/produtos">
+                    <div className='single_image'>
+                        <img src={rompedores} alt="rompedores" />
+                        <p>Rompedores</p>
+                    </div>
+                </Link>
+                <Link to="/produtos">
+                    <div className='single_image'>
+                        <img src={compactadores} alt="compactadores" />
+                        <p>Compactadores</p>
+                    </div>
+                </Link>
+                
 
-                </div>
+                
+
+              
             </div>
         </section>
 

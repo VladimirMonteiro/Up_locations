@@ -8,12 +8,12 @@
     background-color:rgba(0, 0, 0, 0.473);
 }
 
-.image-about {
+.image_about {
     position: relative;
     z-index: 0;
     width: 100%;
     height: 590px;
-    background-image: url('../assets/img.jpg');
+    background-image: url('../../assets/img.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: bottom left;
@@ -42,7 +42,7 @@
     line-height: 23px;
 }
 
-.about-center {
+.about_center {
     max-width: 1300px;
     margin: 0 auto;
     display: flex;
@@ -59,13 +59,13 @@
 .photo img{
     width: 100%;
 }
-.about-message{
+.about_message{
     width: 40%;
     margin-top: 80px;
     padding: 0 2%;
 }
 
-.about-message h2 {
+.about_message h2 {
    
     text-transform: uppercase;
     font-size: 30px;
@@ -73,7 +73,7 @@
 
 }
 
-.about-message h3{
+.about_message h3{
     color: #012E71;
     font-size: 30px;
     font-family: 'Poppins', sans-serif;
@@ -81,10 +81,11 @@
     
 }
 
-.about-message p {
-    font: 18px;
-    line-height: 19px;
+.about_message p {
+    font-size: 17px;
+    line-height: 24px;
     color: #444444;
+
 
 }
 
@@ -116,7 +117,7 @@
     
     }
 
-    .about-message {
+    .about_message {
         width: 80%;
         margin: 0 auto;
         padding: 0 2%;

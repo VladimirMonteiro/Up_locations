@@ -31,11 +31,37 @@ header ul li {
     list-style: none;
     margin-left: 30px;
     font-weight: bold;
+    font-size: 18px;
 
 }
 
 .center ul li a {
     color: yellow
+}
+  /* Estilizando o elemento */
+  .hovver_effect {
+    position: relative;
+    display: inline-block;
+    padding-bottom: 3px; /* Adicionando espaço para a borda inferior crescer */
+    text-decoration: none;
+    color: #333; /* Cor do texto normal */
+}
+
+/* Adicionando a borda inferior inicial */
+.hovver_effect::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px; /* Altura da borda inferior */
+    background-color: yellow; /* Cor da borda */
+    transition: width 0.3s ease; /* Transição suave da largura */
+}
+
+/* Efeito hover - aumentando a largura da borda inferior */
+.hovver_effect:hover::before {
+    width: 100%; /* Largura da borda inferior quando hover */
 }
 
 .menu-mobile {

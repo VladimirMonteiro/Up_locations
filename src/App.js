@@ -1,6 +1,6 @@
 
 
-import {BrowserRouter as Router, Routes, Route} from 'react-router-dom'
+
 
 
 
@@ -8,27 +8,36 @@ import {BrowserRouter as Router, Routes, Route} from 'react-router-dom'
 //components
 import Navbar from './components/navbar/Navbar';
 import Footer from './components/footer/Footer';
+import Container from './components/container';
 
-
-//pages
-import Home from './pages/Home';
-import Products from './pages/Products';
-import Sobre from './pages/Sobre';
-
+import {Outlet} from 'react-router-dom'
+import ScrollToTop from './components/ScrollToTop';
 
 
 function App() {
   return (
-    
-    <Router>
-      <Navbar/>
-      <Routes>
-        <Route path='/' element = {<Home/>} />
-        <Route path='/produtos' element= {<Products/>} />
-        <Route path='/sobre' element = {<Sobre/>}/>
-      </Routes>
+    <div className="App">
+
+      <Navbar />
+      <ScrollToTop/>
+      <Container>
+      <Outlet/>
+
+      </Container>
+     
       <Footer/>
-    </Router>
+     
+
+    
+
+
+
+
+    </div>
+
+
+
+
   );
 }
 

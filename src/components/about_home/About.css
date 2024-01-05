@@ -1,37 +1,39 @@
 
 
-.about-container {
+.container03 {
 
     width: 100%;
-    display: flex;
-    margin-bottom: 35px;
-
-    
-}
-
-.about-container .center {
-    display: flex;
-    flex-wrap: wrap;
-}
-
-.container03  h2 {
-    margin: 20px auto;
-    
-}
-
-.about-container .imagem-up {
-    margin-top: 20px;
-    width: 30%;
-
-
-}
-
-.about-container .imagem-up img {
-    width: 100%;
+    min-height: 450px;
    
+    
+}
+.container03  h2 {
+    margin: 20px;
+    text-align: center;
+    color: #004A90;
+    
 }
 
-.about-container .about-message {
-    margin: 20px;
-    width: 70%;
+.container03 a {
+    color: #004A90;
+    font-weight: bold;
 }
+
+.container03 .center {
+    display: flex;
+    min-height: 400px;
+    align-items: center;
+    justify-content: center;
+}
+
+.single_image{
+    text-align: center;
+    margin: 30px;
+    transition: transform 0.5s; /* Adiciona uma transição suave ao efeito de zoom */
+}
+
+  .single_image:hover {
+    transform: scale(1.05); /* Aumenta o tamanho em 20% quando o mouse está sobre a div */
+  }
+
+

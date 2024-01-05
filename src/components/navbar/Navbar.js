@@ -34,10 +34,10 @@ const Navbar = () => {
                 <h1>Up Locações </h1>
                 <nav className="menu-desktop">
                     <ul>
-                        <li><Link to='/'>Home</Link></li>
-                        <li><Link to='/produtos'>Produtos</Link></li>
-                        <li><Link to='/sobre'>Sobre nós</Link></li>
-                        <li><a href="https://api.whatsapp.com/send?phone=5551999134363" target='_blank' rel="noreferrer">Orçamento</a></li>
+                        <li><Link className="hovver_effect" to='/'>Home</Link></li>
+                        <li><Link className="hovver_effect" to='/produtos'>Produtos</Link></li>
+                        <li><Link className="hovver_effect" to='/sobre'>Sobre nós</Link></li>
+                        <li><a className="hovver_effect" href="https://api.whatsapp.com/send?phone=5551999134363" target='_blank' rel="noreferrer">Orçamento</a></li>
                     </ul>
                 </nav>
                 <nav className="menu-mobile" onClick={ handleOpenMenu}>
