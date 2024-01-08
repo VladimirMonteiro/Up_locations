@@ -37,7 +37,7 @@ const ProductsDetails = () => {
 
 
 
-  }, [])
+  }, [id])
 
   const singleProduct = product.filter((product) => product._id === id)
   console.log(singleProduct)
@@ -73,17 +73,19 @@ const ProductsDetails = () => {
             <>
               <h2>{singleProduct[0].name}</h2>
               <p>{singleProduct[0].description}</p>
+              <button><a href="https://api.whatsapp.com/send?phone=5551999134363" target={'_blank'} rel='noreferrer'>Alugar</a></button>
 
 
 
             </>
           )}
 
-          <button><a href="https://api.whatsapp.com/send?phone=5551999134363" target={'_blank'} rel='noreferrer'>Alugar</a></button>
+          
         </div>
       </div>
       <div className={styles.product_details}>
-        <ul className={styles.list_option}>
+        {product.length > 0 && (
+          <ul className={styles.list_option}>
           {['Detalhes', 'Orientação de segurança', 'Orientação operacional', 'Informações técnicas'].map((item, index) => (
             <li key={index} onClick={() => handleItemClick(index)} style={{
               background: index === itemClicado ? 'linear-gradient(to right ,#0251B8 ,#0267EB)' : ''
@@ -93,6 +95,9 @@ const ProductsDetails = () => {
             </li>
           ))}
         </ul>
+
+        )}
+        
 
         {itemClicado === 0 && product.length > 0 && (
           <div className={styles.option_detalhes}>
@@ -157,7 +162,7 @@ const ProductsDetails = () => {
       </div>
       <h2 className={styles.title_products}>Produtos relacionados</h2>
       <div className={styles.more_products} key={product._id}>
-      {}
+     
         
         
         

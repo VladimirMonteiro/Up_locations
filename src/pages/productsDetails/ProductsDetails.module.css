@@ -187,13 +187,13 @@ margin-right: 100px;
 /*INFORMAÇOES TECNICAS*/
 
 .informes{
-    width: 100%;
+    width: 95%;
     border-top: 1px solid #6D6E71;
     border-bottom: 1px solid #6D6E71;
     border-left: 1px solid #6D6E71;
     border-right: 1px solid #6D6E71;
-    margin: 50px 0;
-    padding: 0 2%;
+    margin: 50px auto;
+    
 }
 
 .informes h3, .informes p{
