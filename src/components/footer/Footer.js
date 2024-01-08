@@ -26,16 +26,16 @@ const Footer = () => {
                 <div>
                     <h3>Equipamentos</h3>
                     <ul>
-                        <li><a href="">Andaimes</a></li>
-                        <li><a href="">Equipamentos para acesso e elevação</a></li>
-                        <li><a href="">Compactação</a></li>
-                        <li><a href="">Concretagem</a></li>
-                        <li><a href="">Equipamentos de jardinagem</a></li>
-                        <li><a href="">Equipamentos de limpeza</a></li>
-                        <li><a href="">Ferramentas Elétricas</a></li>
-                        <li><a href="">Equipamentos para Furação e Demolição</a></li>
-                        <li><a href="">Gerador, bomba e compressor</a></li>
-                        <li><a href="">Outros Equipamentos</a></li>
+                        <li><Link to='/produtos'>Andaimes</Link></li>
+                        <li><Link to='/produtos'>Equipamentos para acesso e elevação</Link></li>
+                        <li><Link to='/produtos'>Compactação</Link></li>
+                        <li><Link to='/produtos'>Concretagem</Link></li>
+                        <li><Link to='/produtos'>Equipamentos de jardinagem</Link></li>
+                        <li><Link to='/produtos'>Equipamentos de limpeza</Link></li>
+                        <li><Link to='/produtos'>Ferramentas Elétricas</Link></li>
+                        <li><Link to='/produtos'>Equipamentos para Furação e Demolição</Link></li>
+                        <li><Link to='/produtos'>Gerador, bomba e compressor</Link></li>
+                        <li><Link to='/produtos'>Outros Equipamentos</Link></li>
                     </ul>
                 </div>
                 <div className='redes_sociais'>

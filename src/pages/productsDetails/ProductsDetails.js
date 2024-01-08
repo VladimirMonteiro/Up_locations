@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react"
 import { useParams } from 'react-router-dom'
+import Loading from "../../components/loading/Loading"
 import { Link } from 'react-router-dom'
 import axios from "axios"
 
@@ -12,6 +13,7 @@ const ProductsDetails = () => {
 
   const { id } = useParams()
   const [product, setProduct] = useState([])
+  const [removeLoading, setRemoveLoading] = useState(false)
   
   const [itemClicado, setItemClicado] = useState(0);
 
@@ -24,8 +26,8 @@ const ProductsDetails = () => {
 
     async function fecthData() {
       await axios.get(`${api}/product`).then((response) => {
-     
         setProduct(response.data)
+        setRemoveLoading(true)
 
       }).catch(err => console.log(err))
 
@@ -61,6 +63,7 @@ const ProductsDetails = () => {
   return (
     <section id="container" className={styles.main_container}>
       <div className={styles.center_container}>
+        {!removeLoading && <Loading/>}
         <div className={styles.image_container}>
           {product.length > 0 && (<img src={`${api}/images/products/${singleProduct[0].image}`} alt={product._id} />)}
 

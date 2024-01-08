@@ -1,5 +1,6 @@
 import CardProduct from "../../components/card_product/CardProduct"
 import styles from './Products.module.css'
+import Loading from "../../components/loading/Loading"
 
 import { BsSearch } from 'react-icons/bs'
 
@@ -22,6 +23,7 @@ const Products = () => {
     const [products, setProducts] = useState([])
     const [searchProducts, setSearchProducts] = useState([])
     let [search, setSearch] = useState('')
+    const [removeLoading, setRemoveLoading] = useState(false)
 
   
 
@@ -33,6 +35,7 @@ const Products = () => {
             await axios.get(`${api}/product`).then((response) => {
                 console.log(response.data)
                 setProducts(response.data)
+                setRemoveLoading(true)
                 return response.data
             }).catch(err => console.log(err))
 
@@ -103,7 +106,9 @@ const Products = () => {
 
 
                 </div>
+                {!removeLoading && <Loading/>}
                 <div className={styles.products}>
+                    
                     {searchProducts.length > 0? (
                         <>
                         
@@ -130,16 +135,7 @@ const Products = () => {
                         </>)}
 
                     </>)}
-
-
-
-
-
-
-
-
-
-
+                   
 
                 </div>
             </div>
