@@ -6,7 +6,7 @@ import axios from "axios"
 import styles from './ProductsDetails.module.css'
 
 
-
+const api = process.env.REACT_APP_API
 
 const ProductsDetails = () => {
 
@@ -23,7 +23,7 @@ const ProductsDetails = () => {
   useEffect(() => {
 
     async function fecthData() {
-      await axios.get(`http://localhost:8000/product`).then((response) => {
+      await axios.get(`${api}/product`).then((response) => {
      
         setProduct(response.data)
 
@@ -62,7 +62,7 @@ const ProductsDetails = () => {
     <section id="container" className={styles.main_container}>
       <div className={styles.center_container}>
         <div className={styles.image_container}>
-          {product.length > 0 && (<img src={`http://localhost:8000/images/products/${singleProduct[0].image}`} alt={product._id} />)}
+          {product.length > 0 && (<img src={`${api}/images/products/${singleProduct[0].image}`} alt={product._id} />)}
 
         </div>
         <div className={styles.product_description}>
@@ -159,7 +159,7 @@ const ProductsDetails = () => {
           
             <div onClick={()=> setItemClicado(0)} key={product._id} className={styles.more_single_product}>
               <div>
-                <img src={`http://localhost:8000/images/products/${product.image}`} alt={product._id} />
+                <img src={`${api}/images/products/${product.image}`} alt={product._id} />
               </div>
               <h3>{product.name}</h3>
               <p>{product.description.substring(0,100)}...</p>

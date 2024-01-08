@@ -8,6 +8,9 @@ import { useState, useEffect } from 'react'
 
 import axios from 'axios'
 
+const api = process.env.REACT_APP_API
+
+
 
 
 
@@ -20,12 +23,14 @@ const Products = () => {
     const [searchProducts, setSearchProducts] = useState([])
     let [search, setSearch] = useState('')
 
+  
+
 
 
     useEffect(() => {
         async function fecthData() {
 
-            await axios.get('https://up-backend.vercel.app/product').then((response) => {
+            await axios.get(`${api}/product`).then((response) => {
                 console.log(response.data)
                 setProducts(response.data)
                 return response.data
@@ -51,7 +56,7 @@ const Products = () => {
             setSearchProducts(searchProducts)
         }else{
             setSearchProducts([])
-            await axios.get('http://localhost:8000/product').then((response) => {
+            await axios.get(`${api}/product`).then((response) => {
                 console.log(response.data)
 
                 return response.data
@@ -62,7 +67,7 @@ const Products = () => {
     }
 
     function handleClick(filter){
-        console.log(Products)
+       
 
         let searchProducts = products.filter((products)=> products.category === filter)
         console.log(searchProducts)
@@ -99,24 +104,24 @@ const Products = () => {
 
                 </div>
                 <div className={styles.products}>
-                    {searchProducts.length > 0 && (
+                    {searchProducts.length > 0? (
                         <>
                         
                             {searchProducts.map((item) => (
-                                <CardProduct key={item._id} image={`https://up-backend.vercel.app/images/products/${item.image}`} name={item.name} description={item.description} alt={item._id} url={`/produtos/${item._id}`}/>
+                                <CardProduct key={item._id} image={`${api}/images/products/${item.image}`} name={item.name} description={item.description} alt={item._id} url={`/produtos/${item._id}`}/>
                             
                             ))}
 
 
 
                         </>
-                    )} <>
+                    ) : (<>
 
 
                         {products.length > 0 && (<>
 
                         {products.map((item) => (
-                            <CardProduct key={item._id} image={`https://up-backend.vercel.app/images/products/${item.image}`} name={item.name} description={item.description} alt={item._id} url={`/produtos/${item._id}`} />
+                            <CardProduct key={item._id} image={`${api}/images/products/${item.image}`} name={item.name} description={item.description} alt={item._id} url={`/produtos/${item._id}`} />
                         ))}
                         
                         
@@ -124,7 +129,7 @@ const Products = () => {
                         
                         </>)}
 
-                    </>
+                    </>)}
 
 
 
