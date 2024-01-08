@@ -159,7 +159,7 @@ const ProductsDetails = () => {
         
         
         
-        {product.map((product) => (
+        {product.slice(0, 5).map((product) => (
           
           <Link  key={product._id}to={`/produtos/${product._id}`}>
           
