@@ -20,7 +20,7 @@ const Contact = () => {
             message
         }
         
-        const res = await fetch(urlEmail, {
+        const res = await fetch('http://localhost:8000/form', {
             method: 'POST',
             headers: {
                 "Content-Type": "application/json"
@@ -62,11 +62,13 @@ const Contact = () => {
                     </form>
                 </div>
                 <div className ='map'>
-                <div className="mapouter"><div className="gmap_canvas"><iframe width="400" height="360" id="gmap_canvas" src="https://maps.google.com/maps?q=up%20loca%C3%A7oes&t=&z=13&ie=UTF8&iwloc=&output=embed" frameBorder="0" scrolling="no" marginHeight="0" marginWidth="0"></iframe><a href="https://123movies-to.org"></a></div></div> </div>
+                <div class="mapouter"><div class="gmap_canvas"><iframe width="100%" height="100%" id="gmap_canvas" src="https://maps.google.com/maps?q=Avenida presidente vargas 3630&t=&z=10&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe><a href="https://2yu.co">2yu</a></div></div>
+               </div>
                 </div>
         </section>
     )
 }
+
 
 
 export default Contact

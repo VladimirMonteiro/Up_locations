@@ -16,7 +16,7 @@ const Products = () => {
 
 
 
-    const [Products, setProducts] = useState([])
+    const [products, setProducts] = useState([])
     const [searchProducts, setSearchProducts] = useState([])
     let [search, setSearch] = useState('')
 
@@ -25,7 +25,7 @@ const Products = () => {
     useEffect(() => {
         async function fecthData() {
 
-            await axios.get('http://localhost:8000/product').then((response) => {
+            await axios.get('https://up-backend.vercel.app/product').then((response) => {
                 console.log(response.data)
                 setProducts(response.data)
                 return response.data
@@ -64,7 +64,7 @@ const Products = () => {
     function handleClick(filter){
         console.log(Products)
 
-        let searchProducts = Products.filter((products)=> products.category === filter)
+        let searchProducts = products.filter((products)=> products.category === filter)
         console.log(searchProducts)
 
         setSearchProducts(searchProducts)
@@ -85,11 +85,11 @@ const Products = () => {
                     <h2>Categorias</h2>
                     <ul>
                         <li onClick={()=> handleClick('Andaimes')}>Andaimes</li>
-                        <li>Equipamentos para acesso e elevação</li>
-                        <li>Compactação</li>
+                        <li onClick={()=> handleClick('acesso e elevação')}>Equipamentos para acesso e elevação</li>
+                        <li onClick={()=> handleClick('Compactação')}>Compactação</li>
                         <li onClick={()=> handleClick('Concretagem')}>Concretagem</li>
-                        <li>Equipamentos de jardinagem</li>
-                        <li>Equipamentos de limpeza</li>
+                        <li onClick={()=> handleClick('Jardinagem')}>Equipamentos de jardinagem</li>
+                        <li onClick={()=> handleClick('Limpeza')}>Equipamentos de limpeza</li>
                         <li>Ferramentas Elétricas</li>
                         <li>Equipamentos para Furação e Demolição</li>
                         <li>Gerador, bomba e compressor</li>
@@ -99,26 +99,32 @@ const Products = () => {
 
                 </div>
                 <div className={styles.products}>
-                    {searchProducts.length > 0? (
+                    {searchProducts.length > 0 && (
                         <>
                         
                             {searchProducts.map((item) => (
-                                <CardProduct key={item._id} image={`http://localhost:8000/images/products/${item.image}`} name={item.name} description={item.description} alt={item._id} url={`/produtos/${item._id}`}/>
+                                <CardProduct key={item._id} image={`https://up-backend.vercel.app//images/products/${item.image}`} name={item.name} description={item.description} alt={item._id} url={`/produtos/${item._id}`}/>
                             
                             ))}
 
 
 
                         </>
-                    ) : (<>
+                    )} <>
 
 
-                        {Products.map((item) => (
+                        {products.length > 0 && (<>
+
+                        {products.map((item) => (
                             <CardProduct key={item._id} image={`http://localhost:8000/images/products/${item.image}`} name={item.name} description={item.description} alt={item._id} url={`/produtos/${item._id}`} />
                         ))}
+                        
+                        
+                        
+                        
+                        </>)}
 
-
-                    </>)}
+                    </>
 
 
 
