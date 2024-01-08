@@ -103,7 +103,7 @@ const Products = () => {
                         <>
                         
                             {searchProducts.map((item) => (
-                                <CardProduct key={item._id} image={`https://up-backend.vercel.app//images/products/${item.image}`} name={item.name} description={item.description} alt={item._id} url={`/produtos/${item._id}`}/>
+                                <CardProduct key={item._id} image={`https://up-backend.vercel.app/images/products/${item.image}`} name={item.name} description={item.description} alt={item._id} url={`/produtos/${item._id}`}/>
                             
                             ))}
 
@@ -116,7 +116,7 @@ const Products = () => {
                         {products.length > 0 && (<>
 
                         {products.map((item) => (
-                            <CardProduct key={item._id} image={`http://localhost:8000/images/products/${item.image}`} name={item.name} description={item.description} alt={item._id} url={`/produtos/${item._id}`} />
+                            <CardProduct key={item._id} image={`https://up-backend.vercel.app/images/products/${item.image}`} name={item.name} description={item.description} alt={item._id} url={`/produtos/${item._id}`} />
                         ))}
                         
                         
