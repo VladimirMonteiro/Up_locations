@@ -154,7 +154,13 @@ const ProductsDetails = () => {
       </div>
       <h2 className={styles.title_products}>Produtos relacionados</h2>
       <div className={styles.more_products} key={product._id}>
-        {product.slice(0, 5).map((product) => (
+      {}
+        
+        
+        
+        
+        {product.map((product) => (
+          
           <Link  key={product._id}to={`/produtos/${product._id}`}>
           
             <div onClick={()=> setItemClicado(0)} key={product._id} className={styles.more_single_product}>

@@ -240,9 +240,10 @@ section .title_products{
 }
 
 .more_single_product{
-    width: 250px;
+    width: 230px;
     max-height: 300px;
-    padding: 15px;
+    padding: 10px;
+    margin: 20px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -276,6 +277,7 @@ section .title_products{
 .more_single_product p{
     color: #4b4b4d;
     margin-top: 10px;
+    
    
 }
 

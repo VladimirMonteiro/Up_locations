@@ -50,7 +50,7 @@ const Products = () => {
             search = search.charAt(0).toUpperCase() + search.slice(1)
             setSearch(search.trim())
         
-            let searchProducts = Products.filter((product) => product.name.startsWith(search))
+            let searchProducts = products.filter((product) => product.name.startsWith(search))
         
 
             setSearchProducts(searchProducts)

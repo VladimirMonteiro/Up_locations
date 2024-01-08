@@ -31,7 +31,7 @@ const Navbar = () => {
     return(
         <header>
             <div className="center">
-                <h1>Up Locações </h1>
+                <h1><a href="/" style={{color: 'yellow'}}>Up Locações </a></h1>
                 <nav className="menu-desktop">
                     <ul>
                         <li><Link className="hovver_effect" to='/'>Home</Link></li>
