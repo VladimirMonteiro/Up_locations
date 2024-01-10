@@ -65,7 +65,7 @@ const ProductsDetails = () => {
       <div className={styles.center_container}>
         {!removeLoading && <Loading/>}
         <div className={styles.image_container}>
-          {product.length > 0 && (<img src={`${api}/images/products/${singleProduct[0].image}`} alt={product._id} />)}
+          {product.length > 0 && (<img crossOrigin="anonymous" src={`${api}/images/products/${singleProduct[0].image}`} alt={product._id} />)}
 
         </div>
         <div className={styles.product_description}>
@@ -173,7 +173,7 @@ const ProductsDetails = () => {
           
             <div onClick={()=> setItemClicado(0)} key={product._id} className={styles.more_single_product}>
               <div>
-                <img src={`${api}/images/products/${product.image}`} alt={product._id} />
+                <img crossOrigin="anonymous" src={`${api}/images/products/${product.image}`} alt={product._id} />
               </div>
               <h3>{product.name}</h3>
               <p>{product.description.substring(0,100)}...</p>
