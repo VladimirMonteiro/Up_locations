@@ -3,7 +3,7 @@ import {useState} from 'react'
 
 
 
-const urlEmail = process.env.REACT_APP_EMAIL
+const api = process.env.REACT_APP_API
 
 const Contact = () => {
 
@@ -20,7 +20,7 @@ const Contact = () => {
             message
         }
         
-        const res = await fetch('http://localhost:8000/form', {
+        const res = await fetch(`${api}/form`, {
             method: 'POST',
             headers: {
                 "Content-Type": "application/json"

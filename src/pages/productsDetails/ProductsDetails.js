@@ -37,7 +37,7 @@ const ProductsDetails = () => {
 
 
 
-  }, [id])
+  }, [])
 
   const singleProduct = product.filter((product) => product._id === id)
   console.log(singleProduct)

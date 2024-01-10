@@ -81,9 +81,7 @@
     }
 
     .context {
-        width: 95%;
-        margin-left: 10px;
-        margin-bottom: 100px;
+        display: none;
         
        
     }
