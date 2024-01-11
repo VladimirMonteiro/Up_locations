@@ -5,7 +5,7 @@ import Loading from "../../components/loading/Loading"
 import { BsSearch } from 'react-icons/bs'
 
 
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useRef } from 'react'
 
 import axios from 'axios'
 
@@ -23,6 +23,7 @@ const Products = () => {
     const [products, setProducts] = useState([])
     const [searchProducts, setSearchProducts] = useState([])
     let [search, setSearch] = useState('')
+    const searchInputRef = useRef(null);
     const [removeLoading, setRemoveLoading] = useState(false)
 
   
@@ -47,7 +48,7 @@ const Products = () => {
     }, [])
 
     async function handleSubmit(e) {
-        
+        e.preventDefault();
         
         if (search) {
             const searchUpperCase = search.trim().toUpperCase();
@@ -64,6 +65,7 @@ const Products = () => {
         }
     
         setSearch('');
+        searchInputRef.current.blur();
          }
 
 
