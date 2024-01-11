@@ -47,36 +47,34 @@ const Products = () => {
     }, [])
 
     async function handleSubmit(e) {
-        e.preventDefault()
+        e.preventDefault();
+        
         if (search) {
-        
-            search = search.charAt(0).toUpperCase() + search.slice(1)
-            setSearch(search.trim())
-        
-            let searchProducts = products.filter((product) => product.name === search) 
-        
-
-            setSearchProducts(searchProducts)
-        }else{
-            setSearchProducts([])
-            await axios.get(`${api}/product`).then((response) => {
-                console.log(response.data)
-
-                return response.data
-            }).catch(err => console.log(err))
+            const searchUpperCase = search.trim().toUpperCase();
+            setSearch(searchUpperCase);
+    
+            console.log('Search:', searchUpperCase);
+    
+            let searchProducts = products.filter((product) =>
+                product.name.trim().toUpperCase().includes(searchUpperCase)
+            );
+    
+            setSearchProducts(searchProducts);
+            console.log('Filtered Products:', searchProducts);
         }
-     
-        setSearch('')
-    }
+    
+        setSearch('');
+         }
 
-    function handleClick(filter){
+
+         function handleClick(filter){
        
 
-        let searchProducts = products.filter((products)=> products.category === filter)
-        console.log(searchProducts)
-
-        setSearchProducts(searchProducts)
-    }
+            let searchProducts = products.filter((products)=> products.category === filter)
+            console.log(searchProducts)
+    
+            setSearchProducts(searchProducts)
+        }
 
 
   
@@ -113,7 +111,7 @@ const Products = () => {
                         <>
                         
                             {searchProducts.map((item) => (
-                                <CardProduct key={item._id} image={`${api}/images/products/${item.image}`} name={item.name} description={item.description} alt={item._id} url={`/produtos/${item._id}`}/>
+                                <CardProduct  key={item._id} image={`${api}/images/products/${item.image}`} name={item.name} description={item.description} alt={item._id} url={`/produtos/${item._id}`}/>
                             
                             ))}
 

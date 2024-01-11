@@ -14,7 +14,7 @@ const ProductsDetails = () => {
   const { id } = useParams()
   const [product, setProduct] = useState([])
   const [removeLoading, setRemoveLoading] = useState(false)
-  
+
   const [itemClicado, setItemClicado] = useState(0);
 
 
@@ -45,17 +45,25 @@ const ProductsDetails = () => {
 
 
 
-
-
-  
-
-
-
-
   const handleItemClick = (index) => {
     // Atualiza o estado para o índice do item clicado
     setItemClicado(index);
   };
+
+  const productForCategory = (allProduct, category) => {
+    const productsForCategory = allProduct.filter((product) => product.category === category)
+
+    return productsForCategory.filter((product)=> product._id !== id)
+  }
+
+
+  const randomProducts = (allProduct) => {
+    const randomProducts = allProduct.sort(()=> Math.random() - 0.5)
+    return randomProducts.slice(0,5).filter((product) => product._id !== id)
+  }
+
+  const categoryProducts = singleProduct[0] ? productForCategory(product, singleProduct[0].category) : []
+  const moreProducts = randomProducts(product)
 
 
 
@@ -63,7 +71,7 @@ const ProductsDetails = () => {
   return (
     <section id="container" className={styles.main_container}>
       <div className={styles.center_container}>
-        {!removeLoading && <Loading/>}
+        {!removeLoading && <Loading />}
         <div className={styles.image_container}>
           {product.length > 0 && (<img crossOrigin="anonymous" src={`${api}/images/products/${singleProduct[0].image}`} alt={product._id} />)}
 
@@ -80,28 +88,28 @@ const ProductsDetails = () => {
             </>
           )}
 
-          
+
         </div>
       </div>
       <div className={styles.product_details}>
         {product.length > 0 && (
           <ul className={styles.list_option}>
-          {['Detalhes', 'Orientação de segurança', 'Orientação operacional', 'Informações técnicas'].map((item, index) => (
-            <li key={index} onClick={() => handleItemClick(index)} style={{
-              background: index === itemClicado ? 'linear-gradient(to right ,#0251B8 ,#0267EB)' : ''
-            }}
-            >
-              {item}
-            </li>
-          ))}
-        </ul>
+            {['Detalhes', 'Orientação de segurança', 'Orientação operacional', 'Informações técnicas'].map((item, index) => (
+              <li key={index} onClick={() => handleItemClick(index)} style={{
+                background: index === itemClicado ? 'linear-gradient(to right ,#0251B8 ,#0267EB)' : ''
+              }}
+              >
+                {item}
+              </li>
+            ))}
+          </ul>
 
         )}
-        
+
 
         {itemClicado === 0 && product.length > 0 && (
           <div className={styles.option_detalhes}>
-            <p>{singleProduct[0].description}, entre em contato com <span style={{color: '#0251B8', fontWeight: 'bold'}}> Up Locações</span> para mais informações.</p>
+            <p>{singleProduct[0].description}, entre em contato com <span style={{ color: '#0251B8', fontWeight: 'bold' }}> Up Locações</span> para mais informações.</p>
 
             <h3>Atenção</h3>
             <ul>
@@ -109,7 +117,7 @@ const ProductsDetails = () => {
 
               <li>As imagens dos produtos/equipamentos são ilustrativas.</li>
 
-              <li>Consulte a <span style={{color: '#0251B8', fontWeight: 'bold'}}>Up Locações</span> em caso de dúvidas.</li>
+              <li>Consulte a <span style={{ color: '#0251B8', fontWeight: 'bold' }}>Up Locações</span> em caso de dúvidas.</li>
 
             </ul>
           </div>
@@ -118,10 +126,10 @@ const ProductsDetails = () => {
           <div className={styles.option_segurança}>
             <h3>Cuidados especiais</h3>
             <ul>
-             {singleProduct[0].security_information.map((product, index)=> (
-              <li key={index}>{product}</li>
-             ))}
-              
+              {singleProduct[0].security_information.map((product, index) => (
+                <li key={index}>{product}</li>
+              ))}
+
               <h3>Cuidados para transportar</h3>
 
               <ul>
@@ -146,37 +154,53 @@ const ProductsDetails = () => {
             </ul>
           </div>
         )}
-        {itemClicado === 3 &&(
+        {itemClicado === 3 && (
           <div className={styles.informes}>
-            {Object.keys(singleProduct[0].technical_information).map((key)=> (
+            {Object.keys(singleProduct[0].technical_information).map((key) => (
               <div key={key} className={styles.details_product}>
-                    <h3>{key}</h3>
-                    <p>{singleProduct[0].technical_information[key]}</p>
+                <h3>{key}</h3>
+                <p>{singleProduct[0].technical_information[key]}</p>
               </div>
             ))}
-         
-         
+
+
 
           </div>
         )}
       </div>
       <h2 className={styles.title_products}>Produtos relacionados</h2>
       <div className={styles.more_products} key={product._id}>
-     
-        
-        
-        
-        
-        {product.slice(0, 5).map((product) => (
-          
-          <Link  key={product._id}to={`/produtos/${product._id}`}>
-          
-            <div onClick={()=> setItemClicado(0)} key={product._id} className={styles.more_single_product}>
+
+
+        {categoryProducts.slice(0, 5).map((product) => (
+
+          <Link key={product._id} to={`/produtos/${product._id}`}>
+
+            <div onClick={() => setItemClicado(0)} key={product._id} className={styles.more_single_product}>
               <div>
                 <img crossOrigin="anonymous" src={`${api}/images/products/${product.image}`} alt={product._id} />
               </div>
               <h3>{product.name}</h3>
-              <p>{product.description.substring(0,100)}...</p>
+              <p>{product.description.substring(0, 100)}...</p>
+            </div>
+          </Link>
+        ))}
+
+      </div>
+      <h2 className={styles.title_products}>Outros produtos</h2>
+      <div className={styles.more_products} key={product._id}>
+
+
+        {moreProducts.map((product) => (
+
+          <Link key={product._id} to={`/produtos/${product._id}`}>
+
+            <div onClick={() => setItemClicado(0)} key={product._id} className={styles.more_single_product}>
+              <div>
+                <img crossOrigin="anonymous" src={`${api}/images/products/${product.image}`} alt={product._id} />
+              </div>
+              <h3>{product.name}</h3>
+              <p>{product.description.substring(0, 100)}...</p>
             </div>
           </Link>
         ))}

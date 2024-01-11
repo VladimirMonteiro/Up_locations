@@ -289,6 +289,12 @@ section .title_products{
         margin: 0;
     }
 
+    .product_description p {
+
+        width: 100%;
+        margin: 30px auto;
+    }
+
     .center_container{
         flex-direction: column;
         justify-content: center;
