@@ -47,7 +47,7 @@ const Products = () => {
     }, [])
 
     async function handleSubmit(e) {
-        e.preventDefault();
+        
         
         if (search) {
             const searchUpperCase = search.trim().toUpperCase();
