@@ -85,7 +85,7 @@ const Products = () => {
         <section className={styles.container_products}>
             <h1>Produtos que você encontrará na Up Locações</h1>
             <form className={styles.form_search} onSubmit={handleSubmit}>
-                <input type="text" name="search" id="search" placeholder="Procure um equipamento..." onChange={(e) => setSearch(e.target.value)} value={search} />
+                <input type="text" ref={searchInputRef} name="search" id="search" placeholder="Procure um equipamento..." onChange={(e) => setSearch(e.target.value)} value={search} />
                 <BsSearch className={styles.icone} onClick={handleSubmit} />
             </form>
             <div className={styles.container}>
