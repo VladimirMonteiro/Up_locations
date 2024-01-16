@@ -14,13 +14,13 @@ const Serviços = () =>{
                <div className='service-single'>
                     <h3>Locaçoes</h3>
                     <img className='icon' src={betoneiraIcon}></img>
-                    <p>A Up locaçoões orefece diversas locações de ferramentes para sua construção, sendo ela betoneiras, andaimes, rompedores e muito mais! <span><a href="/produtos">Confira!</a></span> </p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio repellat, quaerat inventore iure eaque excepturi rem repellendus cumque iste corrupti omnis adipisci quam maxime illum earum facilis ipsa aut quae! <span><a href="/produtos">Confira!</a></span> </p>
                </div>
         
                <div className='service-single'>
                     <h3>betoneiras</h3>
                     <img className='icon' src={betoneiraIcon}></img>
-                    <p>A Up loçaões realiza a manutenção de betoneiras e realiza a troca de peças. <span><a href="">Confira!</a></span></p>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aliquam incidunt optio laudantium ipsum. Veniam repudiandae eos, beatae eaque quod excepturi accusamus facere voluptates? Quos placeat delectus suscipit qui veniam sapiente! <span><a href="">Confira!</a></span></p>
                </div>
                
 
