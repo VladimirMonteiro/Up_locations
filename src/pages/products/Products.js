@@ -30,11 +30,11 @@ const Products = () => {
 
 
 
-   
 
 
 
-  
+
+
 
 
 
@@ -57,43 +57,41 @@ const Products = () => {
 
     async function handleSubmit(e) {
         e.preventDefault();
-        
+
         if (search) {
             const searchUpperCase = search.trim().toUpperCase();
             setSearch(searchUpperCase);
-    
+
             console.log('Search:', searchUpperCase);
-    
+
             let searchProducts = products.filter((product) =>
                 product.name.trim().toUpperCase().includes(searchUpperCase)
             );
-    
+
             setSearchProducts(searchProducts);
             console.log('Filtered Products:', searchProducts);
         }
-    
+
         setSearch('');
-        
-        searchInputRef.current.blur();
-        if (myDivRef.current) {
-            myDivRef.current.scrollIntoView({ behavior: 'smooth' }); 
-        }
-
-        
-         }
 
 
-         function handleClick(filter){
-       
-
-            let searchProducts = products.filter((products)=> products.category === filter)
-            console.log(searchProducts)
-    
-            setSearchProducts(searchProducts)
-        }
 
 
-  
+
+    }
+
+
+    function handleClick(filter) {
+
+
+        let searchProducts = products.filter((products) => products.category === filter)
+        console.log(searchProducts)
+
+        setSearchProducts(searchProducts)
+    }
+
+
+
 
     return (
         <section className={styles.container_products}>
@@ -106,12 +104,12 @@ const Products = () => {
                 <div className={styles.category}>
                     <h2>Categorias</h2>
                     <ul>
-                        <li onClick={()=> handleClick('Andaimes')}>Andaimes</li>
-                        <li onClick={()=> handleClick('acesso e elevação')}>Equipamentos para acesso e elevação</li>
-                        <li onClick={()=> handleClick('Compactação')}>Compactação</li>
-                        <li onClick={()=> handleClick('Concretagem')}>Concretagem</li>
-                        <li onClick={()=> handleClick('Jardinagem')}>Equipamentos de jardinagem</li>
-                        <li onClick={()=> handleClick('Limpeza')}>Equipamentos de limpeza</li>
+                        <li onClick={() => handleClick('Andaimes')}>Andaimes</li>
+                        <li onClick={() => handleClick('acesso e elevação')}>Equipamentos para acesso e elevação</li>
+                        <li onClick={() => handleClick('Compactação')}>Compactação</li>
+                        <li onClick={() => handleClick('Concretagem')}>Concretagem</li>
+                        <li onClick={() => handleClick('Jardinagem')}>Equipamentos de jardinagem</li>
+                        <li onClick={() => handleClick('Limpeza')}>Equipamentos de limpeza</li>
                         <li>Ferramentas Elétricas</li>
                         <li>Equipamentos para Furação e Demolição</li>
                         <li>Gerador, bomba e compressor</li>
@@ -120,15 +118,15 @@ const Products = () => {
 
 
                 </div>
-                {!removeLoading && <Loading/>}
+                {!removeLoading && <Loading />}
                 <div className={styles.products} ref={myDivRef}>
-                    
-                    {searchProducts.length > 0? (
+
+                    {searchProducts.length > 0 ? (
                         <>
-                        
+
                             {searchProducts.map((item) => (
-                                <CardProduct  key={item._id} image={`${api}/images/products/${item.image}`} name={item.name} description={item.description} alt={item._id} url={`/produtos/${item._id}`}/>
-                            
+                                <CardProduct key={item._id} image={`${api}/images/products/${item.image}`} name={item.name} description={item.description} alt={item._id} url={`/produtos/${item._id}`} />
+
                             ))}
 
 
@@ -139,17 +137,17 @@ const Products = () => {
 
                         {products.length > 0 && (<>
 
-                        {products.map((item) => (
-                            <CardProduct key={item._id} image={`${api}/images/products/${item.image}`} name={item.name} description={item.description} alt={item._id} url={`/produtos/${item._id}`} />
-                        ))}
-                        
-                        
-                        
-                        
+                            {products.map((item) => (
+                                <CardProduct key={item._id} image={`${api}/images/products/${item.image}`} name={item.name} description={item.description} alt={item._id} url={`/produtos/${item._id}`} />
+                            ))}
+
+
+
+
                         </>)}
 
                     </>)}
-                   
+
 
                 </div>
             </div>
