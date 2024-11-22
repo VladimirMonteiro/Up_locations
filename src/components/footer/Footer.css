@@ -37,7 +37,16 @@ footer a {
     color: white;
 
 }
-footer a:hover{
+
+footer span a {
+    color: #012C6D;
+
+}
+
+footer span a:hover {
+    border-bottom: 1px solid #012C6D;
+}
+footer .footer_center a:hover{
     color: yellow;
 }
 

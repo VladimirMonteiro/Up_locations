@@ -48,7 +48,7 @@ const Footer = () => {
                 </div>
             </div>
             <div className='sub_footer'>
-                <p><span>Outer Code Software Solutions</span> &copy; 2024 - Todos direitos reservados</p>
+                <p><span><a href="https://outercode.com.br" target={'_blank'}rel='noreferrer' >Outer Code Software Solutions</a></span> &copy; 2024 - Todos direitos reservados</p>
               
             </div>
 
