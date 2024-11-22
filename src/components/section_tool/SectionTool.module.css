@@ -1,0 +1,66 @@
+
+.center {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2%;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 150px;
+    
+}
+
+
+/* Define o estilo base da div */
+.imageContainer {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%; /* Forma de círculo */
+    background: linear-gradient(135deg, #0251B8, #feb47b);
+    background-size: 200% 200%; /* Para animação de gradiente */
+    animation: gradient-animation 3s infinite;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease; /* Suaviza o hover */
+  }
+  
+  /* Define o texto dentro da div */
+  .rounded-div .text {
+    color: #fff;
+    font-weight: bold;
+    text-align: center;
+  }
+  
+  /* Efeito de hover */
+  .imageContainer:hover {
+    transform: scale(1.1); /* Aumenta levemente o tamanho */
+  }
+  
+  /* Animação para o gradiente */
+  @keyframes gradient-animation {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+
+  .containerDescription {
+    width: 50%;
+  }
+
+  .containerDescription h2 {
+    font-weight: bold;
+    color: #0251B8;
+    margin-bottom: 40px;
+  }
+
+  .containerDescription p {
+    line-height: 25px;
+  }
+  
