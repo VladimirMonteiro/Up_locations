@@ -48,7 +48,8 @@ const Footer = () => {
                 </div>
             </div>
             <div className='sub_footer'>
-                <p>&copy; 2023 - Todos direitos reservados <span>Up Locações</span></p>
+                <p><span>Outer Code Software Solutions</span> &copy; 2024 - Todos direitos reservados</p>
+              
             </div>
 
 
