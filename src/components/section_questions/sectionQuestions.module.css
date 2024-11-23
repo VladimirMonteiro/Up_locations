@@ -1,0 +1,64 @@
+.container {
+    width: 100%;
+    margin-top: 100px;
+    margin-bottom: 100px;
+    padding: 0 2%;
+}
+
+.container h2 {
+    text-align: center;
+    color: #0251B8;
+    margin-bottom: 80px;
+}
+
+.center {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2%;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.4);
+  
+}
+
+
+
+details {
+    max-width: 1200px;
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+    margin: 0 auto;
+}
+
+/* Remover o ícone padrão da tag <details> */
+details summary {
+    list-style: none; /* Remove o ícone padrão (seta) */
+    cursor: pointer; /* Muda o cursor para indicar que o item é interativo */
+    position: relative; /* Para usar positionamento do pseudo-elemento */
+    padding-left: 30px; /* Cria espaço para o ícone à esquerda */
+    font-weight: bold;
+  }
+
+  .res {
+    padding: 15px;
+    color: #555;
+    
+  }
+  
+  /* Adicionar ícone customizado usando o pseudo-elemento ::before */
+  details summary::before {
+    content: '\002B'; /* Símbolo de "mais" (Unicode) */
+    position: absolute;
+    left: 0; /* Posiciona o ícone à esquerda do texto */
+    top: 50%; /* Centraliza verticalmente o ícone */
+    transform: translateY(-50%); /* Ajusta o ícone para centralizar */
+    font-size: 24px; /* Tamanho do ícone */
+    color: #007BFF; /* Cor do ícone */
+    transition: transform 0.3s ease; /* Animação suave para a rotação */
+  }
+  
+  /* Quando o <details> está aberto, muda o ícone para "menos" */
+  details[open] summary::before {
+    content: '\2212'; /* Símbolo de "menos" (Unicode) */
+    transform: translateY(-50%) rotate(180deg); /* Rotaciona o ícone para apontar para cima */
+  }
+  

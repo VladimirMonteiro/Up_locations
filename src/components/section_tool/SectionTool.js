@@ -15,7 +15,7 @@ const SectionTool = ({image, alt, title, description, direction}) => {
                 </div>
                 <div className={styles.containerDescription}>
                     <h2>{title}</h2>
-                    <p>
+                    <p style={{color: "#555"}}>
                         {description}
 
                     </p>

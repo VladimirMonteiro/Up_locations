@@ -1,0 +1,22 @@
+/* Estilos para o ícone do WhatsApp */
+.iconContainer {
+    position: fixed;            /* Fixo em relação à tela */
+    bottom: 20px;               /* 20px acima da borda inferior */
+    right: 20px;                /* 20px à direita da borda */
+    background-color: #25D366;  /* Cor de fundo verde do WhatsApp */
+    border-radius: 50%;         /* Tornando o ícone arredondado */
+    padding: 10px;              /* Espaçamento interno */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Sombras para dar profundidade */
+    z-index: 1000;       
+    transition: transform 0.3s, box-shadow 0.3s;       /* Garantir que o ícone fique acima de outros elementos */
+  }
+  
+  .icon {
+    color: white;  /* Cor branca para o ícone */
+    font-size: 36px; /* Tamanho do ícone */
+  }
+
+  .iconContainer:hover {
+    transform: scale(1.1);
+  }
+  
