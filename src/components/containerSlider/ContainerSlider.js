@@ -36,8 +36,8 @@ const ContainerSlider = () => {
                  
                        <img className='sliderImage' src={up_image} alt='up'></img>
                        <div className='context'>
-                            <h2>Andaimes</h2>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. A accusantium, dolorum ex minima debitis in nobis. Dolore hic minima eveniet placeat veritatis unde fuga laborum veniam excepturi ab. Facere, ullam!<span><Link className='link-slider' to={'/produtos'}> Clique aqui</Link></span></p>
+                            <h2>Up Locações</h2>
+                            <p>A Up Locações oferece ao mercado da construção civil produtos como: andaimes, betoneiras, guincho de coluna, vibrador para concreto e conserto de betoneiras e muito mais!<span><Link className='link-slider' to={'/produtos'}> Clique aqui</Link></span></p>
                         </div>
                        
                    </div>

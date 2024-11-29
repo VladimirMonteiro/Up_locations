@@ -12,7 +12,7 @@ const Sobre = () => {
             <div className={styles.overland}>
                 <div className={styles.welcome}>
                     <h2>Conheça a Up Locaçoes</h2>
-                    <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo impedit ad in exercitationem tempore pariatur. Quibusdam, numquam delectus, aliquid cupiditate cum et suscipit ad saepe voluptatem incidunt neque? Sit, distinctio?</p>
+                    <p>A Up Locações é especializada na locação de equipamentos de alta qualidade para a construção civil e manutenção. Com foco em segurança e eficiência, oferece soluções inovadoras, como andaimes e plataformas, atendendo às necessidades de cada projeto com excelência e agilidade.</p>
                 </div>
             </div>
                 <div className={styles.image_about}></div>
